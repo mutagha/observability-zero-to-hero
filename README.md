@@ -148,6 +148,7 @@ Description: Elasticsearch does not require a predefined schema. Fields and mapp
 Benefit: Flexibility in data structure, allowing easy updates and changes without downtime.
 
           INVERTED INDEX IN ELASTICSEARCH
+          
 An inverted index is the core data structure used by Elasticsearch for full-text search. It is optimized to speed up the process of finding documents that contain a given set of words.
 
 How Inverted Index Works
@@ -162,6 +163,7 @@ WHAT IS INDEX IN ELASTICSEARCH
 Structure: Each index is composed of one or more documents, which are JSON objects. These documents contain fields (key-value pairs).
 
 Elasticsearch Index Concepts:
+
 Index: A collection of documents with similar characteristics.
 
 Shards and Replicas: Ensure scalability and high availability.
