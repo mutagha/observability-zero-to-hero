@@ -75,4 +75,47 @@ Welcome to the 7-Day Observability Tutorial Series! This repository contains the
   - Learn how OpenTelemetry simplifies the process of collecting and exporting telemetry data.
   - Understand the benefits of a unified observability approach using OpenTelemetry.
   - Gain hands-on experience with setting up OpenTelemetry Collector, Prometheus, Jaeger, and Elasticsearch to monitor a Golang microservice application.
+ 
+
+
+
+NODE AND CLUSTER IN ELASTICSEARCH
+
+Node
+
+A node is a single server that is part of your Elasticsearch cluster. It stores data and participates in the cluster's indexing and search capabilities. Each node has a unique identifier (node name) and can be configured with specific roles. Here are the primary types of nodes:
+
+Master Node
+
+Responsible for cluster-wide settings and state, managing the cluster, and coordinating operations like creating or deleting indices. Master nodes ensure the cluster is healthy.
+
+Data Node: 
+
+Stores data and handles data-related operations such as CRUD (create, read, update, delete) operations, search, and aggregations. These nodes are crucial for the actual data handling and querying.
+
+Ingest Node:
+
+Preprocesses documents before indexing them. It runs ingest pipelines to transform and enrich the documents.
+
+Coordinator Node:
+
+Routes requests to the appropriate nodes, managing the communication between client and data nodes. It helps offload some of the query processing burden from other nodes.
+
+      Cluster
+
+A cluster is a collection of one or more nodes that together store all your data and provide federated indexing and search capabilities across all nodes. Here are some key features:
+
+Cluster Name:
+All nodes that belong to the same cluster must have the same cluster name. This name is used to identify the cluster when nodes join it.
+
+Shards and Replicas:
+Data in Elasticsearch is divided into indices, which are further divided into shards. Each shard can have replicas for redundancy and high availability. Primary shards store the original data, while replica shards store copies.
+
+High Availability: 
+By distributing shards across multiple nodes, Elasticsearch ensures high availability. If a node fails, its shards can be recovered from the replicas on other nodes.
+
+Cluster State: 
+Managed by master nodes, the cluster state includes metadata about indices, shards, nodes, and other settings. It's crucial for cluster operations and health.
+
+
 
