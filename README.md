@@ -174,6 +174,8 @@ Index Management: Involves creating, updating, searching, and deleting indices.
 
 
 SHARDS AND REPLICAS IN ELASTICSEARCH
+
+
 Shards and replicas are fundamental concepts in Elasticsearch that ensure scalability, performance, and fault tolerance.
 
 Shards
