@@ -173,7 +173,7 @@ Mappings: Define the structure and data types of documents.
 Index Management: Involves creating, updating, searching, and deleting indices.
 
 
-SHARDS AND REPLICAS IN ELASTICSEARCH
+                SHARDS AND REPLICAS IN ELASTICSEARCH
 
 
 Shards and replicas are fundamental concepts in Elasticsearch that ensure scalability, performance, and fault tolerance.
@@ -214,7 +214,8 @@ Replication: Each primary shard’s data is copied to its replica shards, which 
 
 Failover: If a node holding a primary shard fails, a replica shard can be promoted to a primary shard to ensure no data loss.
 
-MAPPING ELASTICSEARCH
+
+                MAPPING ELASTICSEARCH
 
 Mapping in Elasticsearch defines how documents and their fields are stored and indexed. It specifies the data types for each field, the analyzers to be used, and various indexing options
 
