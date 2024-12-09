@@ -79,7 +79,7 @@ Welcome to the 7-Day Observability Tutorial Series! This repository contains the
 
 
 
-NODE AND CLUSTER IN ELASTICSEARCH
+                        NODE AND CLUSTER IN ELASTICSEARCH
 
 Node
 
@@ -213,4 +213,53 @@ Data Distribution: When an index is created, its data is distributed across the 
 Replication: Each primary shard’s data is copied to its replica shards, which are also distributed across the nodes.
 
 Failover: If a node holding a primary shard fails, a replica shard can be promoted to a primary shard to ensure no data loss.
+
+MAPPING ELASTICSEARCH
+
+Mapping in Elasticsearch defines how documents and their fields are stored and indexed. It specifies the data types for each field, the analyzers to be used, and various indexing options
+
+Mappings: Define the structure and data types of documents.
+
+Field Types: Specify how each field is indexed and stored.
+
+Dynamic Mapping: Automatically detect and add fields.
+
+Explicit Mapping: Manually define mappings.
+
+Analyzers: Process text fields during indexing and querying.
+
+            DYNAMIC MAPPING IN ELASTICSEARCH
+
+Dynamic mapping in Elasticsearch is a powerful feature that allows the system to automatically detect and create mappings for new fields as they are added to the index. This means you don't need to define the structure of your documents beforehand2. When you index a document, Elasticsearch will automatically create the necessary fields and data types based on the content of the document.
+
+Here are some key points about dynamic mapping:
+
+Automatic Field Creation: When a new field is detected in a document, Elasticsearch dynamically adds it to the type mapping.
+
+Dynamic Parameter: You can control this behavior using the dynamic parameter, which can be set to true, false, or runtime.
+
+Customization: You can customize dynamic mapping rules using dynamic templates to define custom mappings for dynamically added fields.
+
+Date Detection: By default, Elasticsearch tries to detect date fields and formats them accordingly. This can be customized or disabled3.
+
+Disabling Dynamic Mapping: If you don't want Elasticsearch to automatically create fields, you can set the dynamic parameter to false.
+
+
+             CRUD OPERATION ON ELASTICSEARCH
+
+CRUD operations are fundamental to working with databases, including Elasticsearch. CRUD stands for Create, Read, Update, and Delete
+
+             Summary
+
+Create: Use PUT or POST to add new documents to an index.
+
+Read: Use GET to retrieve documents.
+
+Update: Use POST with the _update endpoint to modify documents.
+
+Delete: Use DELETE to remove documents from an index.
+
+                   Real-World Example: Kubernetes Log Management
+
+In a Kubernetes environment, Fluent Bit can be deployed as a DaemonSet, ensuring that it runs on every node in the cluster. It collects logs from the /var/log/containers directory and forwards them to Elasticsearch. Kibana can then be used to visualize these logs, making it easier to monitor the health and performance of your applications and the Kubernetes cluster itsel
 
