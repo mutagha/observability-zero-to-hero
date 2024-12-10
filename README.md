@@ -365,7 +365,7 @@ Performance	Moderate	   High
 Ease of Setup	Moderate	   Easy
 Ideal Use Case	Complex log processing	  Containerized environments
 
-    DEFERENCE BETWEEN FLUENTBIT AND FLUENTD
+       DEFERENCE BETWEEN FLUENTBIT AND FLUENTD
 
 Fluent Bit and Fluentd are both log processors developed by the same company, Fluent. However, they have distinct features and use cases. Here's a comparison to help you understand the differences:
 
@@ -411,7 +411,7 @@ Logstash is powerful and feature-rich but consumes more resources. It's ideal fo
 
 Fluentd is lightweight, efficient, and suitable for cloud-native applications. It’s easier to set up and excels in environments where resource efficiency is critical.
             
-   INPUT FILTER AND OUTPUT PLUGINS IN FLUENT BIT
+       INPUT FILTER AND OUTPUT PLUGINS IN FLUENT BIT
 
 Input Plugins:
 
