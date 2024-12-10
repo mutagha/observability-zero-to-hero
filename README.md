@@ -425,7 +425,7 @@ Fluent Bit processes the collected logs using filters to parse, modify, and enri
 
 Filters can be used to add metadata, parse JSON logs, or exclude certain logs based on conditions.
 
-Output Plugins:
+  ES Output Plugins:
 
 After processing, Fluent Bit uses output plugins to forward the logs to a centralized logging backend like Elasticsearch, Fluentd, Kafka, or cloud storage services.
 
@@ -440,4 +440,54 @@ How It Works:
 3 Processing: The Kubernetes filter enriches logs with metadata.
 
 4 Forwarding: Logs are forwarded to Elasticsearch for indexing. (Use ES plugin to forward to elasticsearch)
+
+
+Input Plugins
+
+
+These plugins are used to collect data from various sources:
+
+Tail: Reads log files from a specified path.
+
+Systemd: Collects logs from Systemd/Journald.
+
+Docker: Collects logs from Docker containers.
+
+Forward: Receives logs from other Fluentd or Fluent Bit instances.
+
+Filter Plugins
+
+
+These plugins allow you to process and modify the incoming data:
+
+Grep: Filters logs based on matching or excluding patterns.
+
+Kubernetes: Enriches logs with Kubernetes metadata.
+
+Parser: Parses logs into structured data.
+
+Record Modifier: Modifies or adds fields to logs.
+
+Output Plugins
+
+
+These plugins define where Fluent Bit sends the processed logs:
+
+Elasticsearch: Sends logs to an Elasticsearch server.
+
+Kafka: Sends logs to an Apache Kafka server.
+
+InfluxDB: Sends logs to InfluxDB for time-series data storage.
+
+HTTP: Sends logs to an HTTP endpoint.
+
+Usage Example
+
+
+Collecting Logs: Use the Tail input plugin to read log files.
+
+Processing Logs: Apply the Kubernetes filter plugin to add metadata.
+
+Forwarding Logs: Use the Elasticsearch output plugin to send logs to Elasticsearch.
+
 
